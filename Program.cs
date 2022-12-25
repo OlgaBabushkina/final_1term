@@ -26,3 +26,15 @@ for (int i = 0; i < userInput.Length; i++)//цикл заполняет масс
         quantity++;
     }
 }
+
+string[] shortWords = new string[quantity];// инициализация массива для слов (<=3 символов) из ввода пользователя
+
+for (int i = 0; i < words.Length; i++)// поиск слов, которые <=3 символов и запись их в итоговый массив с одновременным выводом
+{
+    if (words[i].Length <= minSymbolNumber)
+    {
+        shortWords[l] = words[i];
+        Console.Write(shortWords[l] + " ");
+        l++;
+    }
+}
