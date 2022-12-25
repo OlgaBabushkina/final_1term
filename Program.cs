@@ -13,3 +13,16 @@ for (int i = 0; i < userInput.Length; i++)//цикл определяет кол
         count++;
     }
 }
+string[] words = new string[count];//инициализация массива из введенных пользователем слов
+
+for (int i = 0; i < userInput.Length; i++)//цикл заполняет массив словами, которые ввел пользователь
+{
+    if (userInput[i] != divider)
+    {
+        words[quantity] += userInput[i];
+    }
+    else
+    {
+        quantity++;
+    }
+}
